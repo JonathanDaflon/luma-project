@@ -1,14 +1,16 @@
-Feature: Home Page
+Feature: Contact Form
     As a Luma end-user,
-    I want to check their Home page,
+    I want to contact them,
     So I can utilize their product
 
     Background: I visit the homepage
-        Given I visit the homepage
+        Given I visit the contact form page
 
-    Scenario: Home page loads successfully
-        Then I should see the text "Manual Tasks’ Worst Nightmare"
+    Scenario: Contact form validates user input
+        When I fill the fields with invalid information
+        Then I should see a validation error
 
-    Scenario: Home page sections and elements are displayed correctly
-        Then I should see the navbar section
-        And I should see the hero section
+    Scenario: Contact form can be filled successfully
+        When I fill the fields with valid information
+        Then I should not see any validation errors
+# Then I should be redirected to the thank you page / not possible due to captcha

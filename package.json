@@ -3,6 +3,7 @@
     "@badeball/cypress-cucumber-preprocessor": "latest",
     "@cypress/browserify-preprocessor": "latest",
     "cypress": "latest",
+    "cypress-iframe": "^1.0.1",
     "cypress-mochawesome-reporter": "latest",
     "cypress-on-fix": "^1.0.3",
     "cypress-real-events": "^1.13.0",
