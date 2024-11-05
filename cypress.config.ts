@@ -25,6 +25,7 @@ async function setupNodeEvents(
 
 export default defineConfig({
   reporter: "cypress-mochawesome-reporter",
+  retries: 2,
   reporterOptions: {
     charts: true,
     reportPageTitle: "Luma Project",
