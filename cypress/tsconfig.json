@@ -3,7 +3,6 @@
     "target": "es6",
     "module": "ESNext",
     "moduleResolution": "node",
-    "allowJs": false,
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
