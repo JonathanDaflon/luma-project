@@ -1,14 +1,19 @@
-Feature: Home Page
+Feature: Responsive Design
     As a Luma end-user,
-    I want to check their Home page,
-    So I can utilize their product
+    I want to check their responsive design,
+    So I can utilize any device to access their website
 
-    Background: I visit the homepage
+    Background: Visiting the homepage
         Given I visit the homepage
 
-    Scenario: Home page loads successfully
-        Then I should see the text "Manual Tasks’ Worst Nightmare"
+    Scenario: Website is responsive on tablets
+        When I change devices to a tablet
+        Then I should not see any elements designed for desktop
+        And I should be able to use the interact with the side menu
+        And I should see all the sections at display
 
-    Scenario: Home page sections and elements are displayed correctly
-        Then I should see the navbar section
-        And I should see the hero section
+    Scenario: Website is responsive on smartphones
+        When I change devices to a smartphone
+        Then I should not see any elements designed for desktop
+        And I should be able to use the interact with the side menu
+        And I should see all the sections at display
