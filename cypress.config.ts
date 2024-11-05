@@ -13,7 +13,7 @@ async function setupNodeEvents(
   on(
     "file:preprocessor",
     browserify({
-      ...preprendTransformerToOptions(config, browserify.defaultOptions),
+      ...preprendTransformerToOptions(config, browserify.defaultOptions || {}),
       typescript: require.resolve("typescript"),
     })
   );

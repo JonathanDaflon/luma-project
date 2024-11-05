@@ -61,7 +61,7 @@ function setupNodeEvents(on, config) {
                 case 1:
                     // This is required for the preprocessor to be able to generate JSON reports after each run, and more,
                     _a.sent();
-                    on("file:preprocessor", (0, browserify_preprocessor_1.default)(__assign(__assign({}, (0, browserify_1.preprendTransformerToOptions)(config, browserify_preprocessor_1.default.defaultOptions)), { typescript: require.resolve("typescript") })));
+                    on("file:preprocessor", (0, browserify_preprocessor_1.default)(__assign(__assign({}, (0, browserify_1.preprendTransformerToOptions)(config, browserify_preprocessor_1.default.defaultOptions || {})), { typescript: require.resolve("typescript") })));
                     // Make sure to return the config object as it might have been modified by the plugin.
                     return [2 /*return*/, config];
             }
