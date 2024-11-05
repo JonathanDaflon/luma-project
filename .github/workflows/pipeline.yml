@@ -12,3 +12,10 @@ jobs:
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
+
+      - name: Upload Mocha Awesome Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: mocha-awesome-report
+          path: cypress/reports/html/index.html
