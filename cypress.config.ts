@@ -1,13 +1,12 @@
-const { defineConfig } = require("cypress");
-const browserify = require("@cypress/browserify-preprocessor");
-const {
-  addCucumberPreprocessorPlugin,
-} = require("@badeball/cypress-cucumber-preprocessor");
-const {
-  preprendTransformerToOptions,
-} = require("@badeball/cypress-cucumber-preprocessor/browserify");
+import { defineConfig } from "cypress";
+import browserify from "@cypress/browserify-preprocessor";
+import { addCucumberPreprocessorPlugin } from "@badeball/cypress-cucumber-preprocessor";
+import { preprendTransformerToOptions } from "@badeball/cypress-cucumber-preprocessor/browserify";
 
-async function setupNodeEvents(on, config) {
+async function setupNodeEvents(
+  on: Cypress.PluginEvents,
+  config: Cypress.PluginConfigOptions
+): Promise<Cypress.PluginConfigOptions> {
   // This is required for the preprocessor to be able to generate JSON reports after each run, and more,
   await addCucumberPreprocessorPlugin(on, config);
 
@@ -29,7 +28,7 @@ module.exports = defineConfig({
     supportFile: false,
     viewportWidth: 1280,
     viewportHeight: 720,
-    specPattern: "*.feature",
+    specPattern: "**/*.feature",
     setupNodeEvents,
   },
 });
