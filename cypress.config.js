@@ -27,7 +27,7 @@ module.exports = defineConfig({
     supportFile: false,
     viewportWidth: 1280,
     viewportHeight: 720,
-    specPattern: "**/*.feature",
+    specPattern: "*.feature",
     setupNodeEvents,
   },
 });
