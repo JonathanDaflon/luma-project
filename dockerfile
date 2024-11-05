@@ -2,10 +2,12 @@ FROM cypress/included:latest
 
 WORKDIR /app
 
+# Copy and install dependencies
 COPY package.json package-lock.json ./
-
 RUN npm ci
-RUN npx cypress verify
+
+# Copy remaining project files
 COPY . .
 
-CMD ["npx", "cypress", "run"]
+# Run Cypress tests with the specified config file
+CMD ["npx", "cypress", "run", "--config-file", "cypress.config.js"]
