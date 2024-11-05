@@ -3,7 +3,7 @@ Feature: Contact Form
     I want to contact them,
     So I can utilize their product
 
-    Background: I visit the homepage
+    Background: Visiting the homepage
         Given I visit the contact form page
 
     Scenario: Contact form validates user input
