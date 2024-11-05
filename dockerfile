@@ -1,4 +1,4 @@
-FROM cypress/browsers:latest
+FROM cypress/included:latest
 
 WORKDIR /app
 
