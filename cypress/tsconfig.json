@@ -1,14 +1,16 @@
 {
   "compilerOptions": {
+    "outDir": "dist",
     "target": "es6",
-    "module": "ESNext",
+    "module": "nodenext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "lib": ["es6", "dom"],
+    "lib": ["ESNext", "dom"],
     "types": ["cypress", "node"],
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "esModuleInterop": true
   },
   "include": ["**/*.ts"]
 }

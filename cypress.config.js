@@ -1,7 +1,6 @@
 const { defineConfig } = require("cypress");
-const {
-  addCucumberPreprocessorPlugin,
-} = require("@badeball/cypress-cucumber-preprocessor");
+const { addCucumberPreprocessorPlugin } =
+  require("@badeball/cypress-cucumber-preprocessor").default;
 const {
   preprendTransformerToOptions,
 } = require("@badeball/cypress-cucumber-preprocessor/browserify");
