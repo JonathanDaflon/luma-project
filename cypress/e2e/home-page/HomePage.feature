@@ -3,7 +3,7 @@ Feature: Home Page
     I want to check their Home page,
     So I can utilize their product
 
-    Background: I visit the homepage
+    Background: Visiting the homepage
         Given I visit the homepage
 
     Scenario: Home page loads successfully

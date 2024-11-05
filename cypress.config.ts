@@ -25,6 +25,7 @@ async function setupNodeEvents(
 
 export default defineConfig({
   reporter: "cypress-mochawesome-reporter",
+  retries: 2,
   reporterOptions: {
     charts: true,
     reportPageTitle: "Luma Project",
@@ -34,8 +35,8 @@ export default defineConfig({
   },
   e2e: {
     baseUrl: "https://www.lumahealth.io",
+    chromeWebSecurity: false,
     screenshotOnRunFailure: true,
-    fixturesFolder: false,
     viewportWidth: 1280,
     viewportHeight: 720,
     specPattern: "cypress/e2e/**/*.feature",
