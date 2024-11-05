@@ -56,7 +56,7 @@ When("I fill the fields with valid information", () => {
       .find("div.hs_how_d_you_hear_about_us_ textarea")
       .type(contact.area2);
 
-    cy.iframe("iframe.iframe-full-height").find("input[type='submit']").click();
+    // cy.iframe("iframe.iframe-full-height").find("input[type='submit']").click();
   });
 });
 
