@@ -13,8 +13,10 @@ async function setupNodeEvents(on, config) {
 
   on(
     "file:preprocessor",
-    browserify(preprendTransformerToOptions(config, browserify.defaultOptions)),
-      typescript: require.resolve("typescript")
+    browserify({
+      ...preprendTransformerToOptions(config, browserify.defaultOptions),
+      typescript: require.resolve("typescript"),
+    })
   );
 
   // Make sure to return the config object as it might have been modified by the plugin.
