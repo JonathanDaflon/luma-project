@@ -20,6 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        if: steps.npm-cache.outputs.cache-hit != 'true'
 
       - name: Run Cypress Tests
         run: npx cypress run
