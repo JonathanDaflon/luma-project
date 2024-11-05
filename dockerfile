@@ -7,6 +7,6 @@ COPY package.json package-lock.json ./
 RUN npm ci
 RUN npx cypress verify
 COPY . .
-RUN npm run build
+RUN npx tsc --project cypress/tsconfig.json
 
 CMD ["npx", "cypress", "run"]
