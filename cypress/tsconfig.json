@@ -2,13 +2,13 @@
   "compilerOptions": {
     "outDir": "dist",
     "target": "es6",
-    "module": "nodenext",
-    "moduleResolution": "node",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "lib": ["ESNext", "dom"],
-    "types": ["cypress", "node"],
+    "types": ["cypress", "node", "cypress-mochawesome-reporter"],
     "skipLibCheck": true,
     "esModuleInterop": true
   },

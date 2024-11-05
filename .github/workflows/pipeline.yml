@@ -1,6 +1,6 @@
 name: Cypress Tests using Cypress Docker Image
 
-on: push
+on: [push, pull_request]
 
 jobs:
   cypress-run:
@@ -10,10 +10,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Build Docker Image
-        run: |
-          docker build -t cypress-tests .
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
 
-      - name: Run Cypress Tests
-        run: |
-          docker run --rm -v ${{github.workspace}}:/app cypress-tests
+      - name: Upload Mocha Awesome Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mocha-awesome-report
+          path: cypress/reports/html/index.html
