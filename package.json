@@ -5,6 +5,7 @@
     "cypress": "latest",
     "cypress-mochawesome-reporter": "latest",
     "cypress-on-fix": "^1.0.3",
+    "cypress-real-events": "^1.13.0",
     "typescript": "latest"
   },
   "cypress-cucumber-preprocessor": {
