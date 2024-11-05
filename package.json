@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "build": "tsc",
+    "cypress:run": "npm run build && npx cypress run"
+  },
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^21.0.2",
     "@cypress/browserify-preprocessor": "^3.0.2",
